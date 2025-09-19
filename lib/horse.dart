@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 class Horse {
+  String name;
   int currDistance;
   int currSpeed;
   int currStamina;
@@ -11,8 +12,8 @@ class Horse {
   int acceleration;
   int luck;
   
-  static final adjectivesFile = File('assets/nouns-1.txt');
-  static final nounsFile = File('assets/adj-1.txt');
+  static final adjectivesFile = File('assets/adj-1.txt');
+  static final nounsFile = File('assets/nouns-1.txt');
 
 
   static Future<List<String>> getNounsList() async
@@ -42,10 +43,10 @@ class Horse {
       }
   }
 
-  Horse()
+  Horse(this.name)
     : currDistance = 0,
       currSpeed = 0,
-      maxSpeed = Random().nextInt(100) + 10,
+      maxSpeed = Random().nextInt(91) + 10,
       maxStamina = Random().nextInt(10) + 1,
       acceleration = Random().nextInt(10) + 1,
       luck = Random().nextInt(10) + 1,
