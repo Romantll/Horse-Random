@@ -55,5 +55,9 @@ class Horse {
         currStamina = maxStamina;
       }
   
+  @override
+  String toString(){
+    return 'Horse: $name, Max Stamina: $maxStamina, Max Speed: $maxSpeed, Acceleration: $acceleration, Luck: $luck';
+  }
 }
   
