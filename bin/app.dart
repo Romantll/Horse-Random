@@ -4,7 +4,7 @@ import 'dart:io';
 
 void main() async {
 
-  stdout.write('Enter amount of horse: ');
+  stdout.write('Enter amount of horses: ');
   String? userNumHorses = stdin.readLineSync();
   int numHorses = int.tryParse(userNumHorses ?? '') ?? 0;
 

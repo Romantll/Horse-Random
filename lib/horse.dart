@@ -34,13 +34,20 @@ class Horse {
       var randomNoun = nouns[rand.nextInt(nouns.length)];
       var randomAdjectives = adjectives[rand.nextInt(adjectives.length)];
 
-      //50% chance it is just an adjective & noun, else just noun
+      //50% chance it is an adjective & noun, else just noun
       if(rand.nextBool())
       {
         return "$randomAdjectives $randomNoun";
       }else {
         return randomNoun;
       }
+  }
+
+  void refreshForRace()
+  {
+    currDistance = 0;
+    currSpeed = 0;
+    currStamina = maxStamina;
   }
 
   Horse(this.name)
