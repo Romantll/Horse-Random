@@ -43,7 +43,7 @@ class Race
 
           if(h.currDistance >= raceDistance){
             winners.add(h);
-            print('${h.name} crosses at distance ${h.currDistance}');
+            print('${h.name} crosses');
           }
         }
       }
